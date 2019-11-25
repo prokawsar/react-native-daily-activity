@@ -1,6 +1,7 @@
 
 Github style daily activity charts for React Native
 
+N.B: Currently works only for current months data.
 
 Renders the native daily charts component on iOS and Android. Example:
 
