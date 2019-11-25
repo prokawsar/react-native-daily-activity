@@ -6,6 +6,7 @@ Renders the native daily charts component on iOS and Android. Example:
 
 ```jsx
 import React from 'react';
+import { View } from 'react-native';
 import DailyActivityChart from 'react-native-daily-activity';
 
 export default function App()
@@ -21,7 +22,7 @@ export default function App()
     '2019/11/9': 11,
     '2019/11/10': 13
   }
-  
+
   render() {
     return (
       <View>
