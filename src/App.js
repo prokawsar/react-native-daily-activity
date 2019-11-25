@@ -3,19 +3,18 @@ import {Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   days: {
-    height: 170,
+    height: 155,
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     flexWrap: 'wrap',
-    alignContent: 'center'
+    justifyContent: 'center'
+
   },
   day: {
-    width: 20,
-    height: 20,
-    margin: 2,
-    // backgroundColor: '#000'
+    width: 35,
+    height: 35,
+    margin: 2
   },
-
 });
 
 const activityLevelColor = (level) => {
@@ -29,22 +28,21 @@ const activityLevelColor = (level) => {
 const Month = (props) => {
   let now = new Date(),
       days = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate(),
-      // currentMonth = new Array(days).fill(1).map((v, i) => v + i)
-      currentMonth = new Array(days).fill(1).map((v, i) => `${now.getFullYear()}/${now.getMonth() + 1}/${v + i}` )
-  let { frequency } = props
+      currentMonth = new Array(days+1).fill(1).map((v, i) => `${now.getFullYear()}/${now.getMonth() + 1}/${v + i}` ),
+      { frequency } = props
 
   return currentMonth.map((day, key) => (
-    <View style={[styles.day, {backgroundColor: activityLevelColor(frequency[day])}]} key={key} >
-
-    </View>
+    <View style={[styles.day, {backgroundColor: activityLevelColor(frequency[day])}]} key={key} />
   ))
 
 }
 
 export default function App(props) {
   return (
-    <View style={styles.days}>
-      <Month frequency={props.data}/>
+    <View>
+      <View style={styles.days}>
+        <Month frequency={props.data}/>
+      </View>
     </View>
   )
 
