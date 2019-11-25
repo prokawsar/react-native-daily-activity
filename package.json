@@ -1,5 +1,5 @@
 {
-  "name": "github-style-daily-activity",
+  "name": "react-native-daily-activity",
   "version": "1.0.0",
   "description": "Github style daily activity charts for React Native",
   "main": "index.js",
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prokawsar/github-style-daily-activity.git"
+    "url": "https://github.com/prokawsar/react-native-daily-activity.git"
   },
-  "homepage": "https://github.com/prokawsar/github-style-daily-activity",
+  "homepage": "https://github.com/prokawsar/react-native-daily-activity",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
