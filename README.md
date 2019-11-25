@@ -35,7 +35,8 @@ export default function App()
 ```
 
 ---
-
+# How its look like
+![react-native-daily-activity](https://i.ibb.co/hVH98HQ/demo.png)
 # Reference
 
 ## Props
