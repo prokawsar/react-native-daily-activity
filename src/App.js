@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -28,7 +28,7 @@ const activityLevelColor = (level) => {
 const Month = (props) => {
   let now = new Date(),
       days = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate(),
-      currentMonth = new Array(days+1).fill(1).map((v, i) => `${now.getFullYear()}/${now.getMonth() + 1}/${v + i}` ),
+      currentMonth = new Array(days).fill(1).map((v, i) => `${now.getFullYear()}/${now.getMonth() + 1}/${v + i}` ),
       { frequency } = props
 
   return currentMonth.map((day, key) => (
