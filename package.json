@@ -1,10 +1,18 @@
 {
   "name": "github-style-daily-activity",
   "version": "1.0.0",
-  "description": "Github style daily activity for React Native",
+  "description": "Github style daily activity charts for React Native",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prokawsar/github-style-daily-activity.git"
+  },
+  "homepage": "https://github.com/prokawsar/github-style-daily-activity",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react",
@@ -13,7 +21,7 @@
     "activity",
     "charts"
   ],
-  "author": "prokawsar",
+  "author": "prokawsar (prokawsar@gmail.com)",
   "license": "ISC",
   "peerDependencies": {
     "react": "^16.12.0",
