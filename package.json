@@ -1,0 +1,22 @@
+{
+  "name": "github-style-daily-activity",
+  "version": "1.0.0",
+  "description": "Github style daily activity for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "daily",
+    "activity",
+    "charts"
+  ],
+  "author": "prokawsar",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-native": "^0.61.5"
+  }
+}
