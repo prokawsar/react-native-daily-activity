@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import App from './src/App';
 
-export default function DailyActivityChart(){
+export default function DailyActivityChart(props){
   return (
-    <App />
+    <App data={props.data}/>
   )
 
 }
