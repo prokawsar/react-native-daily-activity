@@ -1,8 +1,6 @@
 
 Github style daily activity charts for React Native
 
-N.B: Currently works only for current months data.
-
 Renders the native daily charts component on iOS and Android. Example:
 
 ```jsx
@@ -69,3 +67,39 @@ Object of data, that holds the one current month reports. Data structure given b
 
 ---
 
+
+### `specificMonth`
+
+Number of month data you are given. If you want to render specific any month rather than current.
+At this situation, year will be current year if there is no any given value to `specificYear`.
+Example:
+```
+January = 1,
+March   = 3,
+April   = 4,
+
+```
+
+
+| Type     | Required |
+| -------- | -------- |
+| Number | No       |
+
+---
+
+### `specificYear`
+
+Specific year of data you are given. If you want to render specific any year rather than current.
+At this situation, month will be current month if there is no any given value to `specificMonth`.
+Example:
+```
+2019, 2018
+
+```
+
+
+| Type     | Required |
+| -------- | -------- |
+| Number | No       |
+
+---
