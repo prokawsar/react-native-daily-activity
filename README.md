@@ -74,9 +74,7 @@ Number of month data you are given. If you want to render specific any month rat
 At this situation, year will be current year if there is no any given value to `specificYear`.
 Example:
 ```
-January = 1,
-March   = 3,
-April   = 4,
+<DailyActivityChart data={data} specificMonth={3}/>
 
 ```
 
@@ -93,7 +91,7 @@ Specific year of data you are given. If you want to render specific any year rat
 At this situation, month will be current month if there is no any given value to `specificMonth`.
 Example:
 ```
-2019, 2018
+<DailyActivityChart data={data} specificYear={2017} />
 
 ```
 
