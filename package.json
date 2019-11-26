@@ -1,6 +1,6 @@
 {
   "name": "react-native-daily-activity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github style daily activity charts for React Native",
   "main": "index.js",
   "scripts": {
