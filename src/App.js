@@ -20,6 +20,11 @@ const styles = StyleSheet.create({
 
 const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+/*
+  level as int
+  color as hex color
+  return the color according to level
+*/
 const activityLevelColor = (level, color) => {
     color = color ? color : '#884EA0'
     let theme = RGBToHSL(hexToRGB(color)),
@@ -30,14 +35,11 @@ const activityLevelColor = (level, color) => {
     if(level < 10) return `hsl(${h},${s}%,${l+10}%)`
     return `hsl(${h},${s}%,${l}%)`
 
-    // if(level == 0 || level == null) return '#E4D4EA' //'#E7DAEC'
-    // if(level < 5) return '#CB94E3'
-    // if(level < 10) return '#9B59B6'
-    // return '#884EA0'
-
-
 }
 
+/*
+  Render a month charts with given level and if color so.
+*/
 const Month = (props) => {
   let now = new Date(),
       { frequency, specificMonth, specificYear, color } = props,
