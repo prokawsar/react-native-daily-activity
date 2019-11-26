@@ -44,7 +44,7 @@ export default function App()
 ### `data`
 
 Object of data, that holds the one current month reports. Data structure given below.
-```
+```jsx
 {
   '2019/11/1': 3,
   '2019/11/2': 3,
@@ -73,7 +73,7 @@ Object of data, that holds the one current month reports. Data structure given b
 Number of month data you are given. If you want to render specific any month rather than current.
 At this situation, year will be current year if there is no any given value to `specificYear`.
 Example:
-```
+```jsx
 <DailyActivityChart data={data} specificMonth={3}/>
 
 ```
@@ -90,7 +90,7 @@ Example:
 Specific year of data you are given. If you want to render specific any year rather than current.
 At this situation, month will be current month if there is no any given value to `specificMonth`.
 Example:
-```
+```jsx
 <DailyActivityChart data={data} specificYear={2017} />
 
 ```
@@ -99,5 +99,23 @@ Example:
 | Type     | Required |
 | -------- | -------- |
 | Number | No       |
+
+---
+
+
+### `color`
+
+Specific color can be set. For setting color, it has to be a HEX color code and most darkest version of choosen color.
+
+Example:
+```jsx
+<DailyActivityChart data={data} color={'#0821F3'} />
+
+```
+
+
+| Type     | Required |
+| -------- | -------- |
+| HEX color code | No       |
 
 ---
