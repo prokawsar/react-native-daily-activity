@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const daysInMonth = [0, 31, 28, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31]
+const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 const activityLevelColor = (level) => {
   if(level == 0 || level == null) return '#E7DAEC'
@@ -29,11 +29,11 @@ const activityLevelColor = (level) => {
 
 const Month = (props) => {
   let now = new Date(),
-      { frequency, specificMonth } = props,
+      { frequency, specificMonth, specificYear } = props,
       days = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate(),
-      currentMonth = new Array(specificMonth ? daysInMonth[specificMonth] : days).fill(1).map((v, i) => `${now.getFullYear()}/${now.getMonth() + 1}/${v + i}` )
+      monthChart = new Array(specificMonth ? daysInMonth[specificMonth] : days).fill(1).map((v, i) => `${specificYear ? specificYear : now.getFullYear()}/${specificMonth ? specificMonth : now.getMonth() + 1}/${v + i}` )
 
-  return currentMonth.map((day, key) => (
+  return monthChart.map((day, key) => (
     <View style={[styles.day, {backgroundColor: activityLevelColor(frequency[day])}]} key={key} />
   ))
 
@@ -43,7 +43,7 @@ export default function App(props) {
   return (
     <View>
       <View style={styles.days}>
-        <Month frequency={props.data} specificMonth={props.specificMonth}/>
+        <Month frequency={props.data} specificMonth={props.specificMonth} specificYear={props.specificYear}/>
       </View>
     </View>
   )
